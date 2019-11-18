@@ -1,0 +1,9 @@
+
+<h2>Create a new vacancy:</h2>
+<%= simple_form_for @vacancy do |v| %>
+  <%= v.input :title %>
+  <%= v.input :school %>
+  <%= v.input :salary %>
+  <%= v.input :description %>
+  <%= v.button :submit %>
+<% end %>

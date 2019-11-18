@@ -1,0 +1,11 @@
+index.html.erb
+<h1>Job Vacancies</h1>
+<% @vacancies.each do |vacancy|  %>
+<%= vacancy.title %>
+<%= vacancy.school %>
+<%= vacancy.description %>
+<%= link_to "More Details", vacancy_path(vacancy) %>
+<% end %>
+
+
+ <p><%= link_to "Create new vacancy", new_vacancy_path %></p>
