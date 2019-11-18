@@ -1,7 +1,17 @@
-<h1>Show Page</h1>
+<!-- Vacancy Detail Page -->
 
-<%= @vacancy.title %>
-<%= @vacancy.school %>
-<%= @vacancy.description %>
+<h1>Role Detail</h1>
 
-<%= link_to "Back to homepage", vacancies_path %>
+<h5>Role:</h5>
+<h7><%= @vacancy.title %></h7>
+
+<h5>School:</h5>
+<h7><%= @vacancy.school %></h7>
+
+<h5>Salary:</h5>
+<h7>£<%= @vacancy.salary %></h7>
+
+<h5>Role Description:</h5>
+<h7><%= @vacancy.description %></h7>
+
+<%= link_to "Back to homepage", root_path %>

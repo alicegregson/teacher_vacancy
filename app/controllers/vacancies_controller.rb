@@ -13,8 +13,12 @@
   end
 
   def create
-    Vacancy.create(vacancy_params)
-    redirect_to vacancies_path
+    vacancy = Vacancy.new(vacancy_params)
+    if vacancy.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit
