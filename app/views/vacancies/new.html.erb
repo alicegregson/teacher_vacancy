@@ -1,17 +1,25 @@
 <!-- New vacancy form: -->
-<h2>Create a new vacancy:</h2>
 
-<div class="vacancy_form">
-  <h4>Post a role here:</h4>
-  <%= simple_form_for(@vacancy) do |v| %>
-    <%= v.error_notification %>
-    <%= v.error_notification message: v.object.errors[:base].to_sentence if v.object.errors[:base].present? %>
-    <%= v.input :title %>
-    <%= v.input :school %>
-    <%= v.input :salary, as: :numeric %>
-    <%= v.input :description %>
-    <%= v.button :submit, class: "btn btn-success" %>
-  <% end %>
+<div class="vacancy-form-page-container">
+  <div class="text-button-container d-flex justify-content-between">
+    <h2>Create a new vacancy:</h2>
+    <div class="homepage-button">
+      <p><%= link_to "Back to vacancies listing", root_path, class: "btn btn-info vacancy-button" %></p>
+    </div>
+  </div>
+
+  <div class="vacancy_form">
+    <h4>Post a role here:</h4>
+    <%= simple_form_for(@vacancy) do |v| %>
+      <%= v.error_notification %>
+      <%= v.error_notification message: v.object.errors[:base].to_sentence if v.object.errors[:base].present? %>
+      <%= v.input :title %>
+      <%= v.input :school %>
+      <%= v.input :salary, as: :numeric %>
+      <%= v.input :description %>
+      <%= v.button :submit, class: "btn btn-success" %>
+    <% end %>
+  </div>
 </div>
 
-<p><%= link_to "Back to vacancies listing", root_path, class: "btn btn-info vacancy-button" %></p>
+
