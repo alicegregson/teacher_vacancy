@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+  vacancy1 = Vacancy.create(title: "TA", school: "Le Wagon", salary: 500, description: "Teaching Assistant role at Le Wagon Coding Bootcamp")

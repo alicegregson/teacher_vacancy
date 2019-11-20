@@ -10,8 +10,7 @@
       <table class="table-responsive-lg table-bordered">
         <thead>
           <tr>
-            <th scope="col" style="visibility:collapse;"></th>
-            <th scope="col" style="width: 150px;">Role</th>
+            <th scope="col" style="width: 150px; height: 50px;">Role</th>
             <th scope="col" style="width: 150px;">School</th>
             <th scope="col" style="width: 150px;">Salary</th>
             <th scope="col" style="width: 300px;">Description</th>
@@ -20,7 +19,6 @@
         <tbody>
           <tr>
             <% @vacancies.each do |vacancy|  %>
-            <th scope="row"></th>
               <td><%= link_to vacancy.title, vacancy_path(vacancy) %></td>
               <td><%= vacancy.school %></td>
               <td>£<%= vacancy.salary %></td>
