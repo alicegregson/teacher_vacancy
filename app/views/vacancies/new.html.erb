@@ -4,6 +4,8 @@
 <div class="vacancy_form offset-3">
   <h4>Post a role here:</h4>
   <%= simple_form_for(@vacancy) do |v| %>
+    <%= v.error_notification %>
+    <%= v.error_notification message: v.object.errors[:base].to_sentence if v.object.errors[:base].present? %>
     <%= v.input :title %>
     <%= v.input :school %>
     <%= v.input :salary, as: :numeric %>
