@@ -1,20 +1,23 @@
 <!-- Vacancy Detail Page -->
 
-<h2>Further Details</h2>
+<div class="show-page-container">
+  <div class="text-button-container d-flex justify-content-between">
+    <h2>Further Details</h2>
+    <div class="homepage-button">
+      <%= link_to "Back to homepage", root_path, class: "btn btn-info" %>
+    </div>
+  </div>
 
-<div class="show-card offset-3">
-  <h5>Title:</h5>
-  <h6><%= @vacancy.title %></h6>
+  <h5 id="float-text">Find further details about the role you selected here:</h5>
 
-  <h5>School:</h5>
-  <h6><%= @vacancy.school %></h6>
-
-  <h5>Salary:</h5>
-  <h6>£<%= @vacancy.salary %></h6>
-
-  <h5>Role Description:</h5>
-  <h6><%= @vacancy.description %></h6>
+  <div class="show-card">
+    <h5><strong>Open Role:</strong></h5>
+    <h5><strong>Title:</strong> <%= @vacancy.title %></h5>
+    <h5><strong>School:</strong> <%= @vacancy.school %></h5>
+    <h5><strong>Salary:</strong> £<%= @vacancy.salary %></h5>
+    <h5><strong>Role Description:</strong> <%= @vacancy.description %></h5>
+  </div>
 </div>
 
-<%= link_to "Back to homepage", root_path, class: "btn btn-info" %>
+
 

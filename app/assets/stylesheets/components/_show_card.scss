@@ -1,9 +1,27 @@
+// SCSS for show card / role detail page
+
 .show-card {
   width: 40%;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
   h5 {
     padding: 0;
+    letter-spacing: 0.05em;
   }
+}
+
+.homepage-button {
+  margin-right: 10em;
+}
+
+.text-button-container {
+  margin-top: 3%;
+  margin-left: 3%
+}
+
+#float-text {
+  margin-left: 3%;
 }

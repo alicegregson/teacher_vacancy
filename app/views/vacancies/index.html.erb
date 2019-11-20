@@ -1,37 +1,36 @@
 <!-- Index page / Full list of Vacancies -->
 <div class="index-page-container">
-  <div class="header-text">
-    <h1>Job Vacancies</h1>
-    <h4>Find your next role here:</h4>
+  <div class="text-button-container d-flex justify-content-between">
+    <div class="header-text">
+      <h1>Job Vacancies</h1>
+      <h4>Find your next role here:</h4>
+    </div>
+    <div class="vacancy-button">
+      <%= link_to "Create new vacancy", new_vacancy_path, class: "btn btn-info create-vacancy-btn" %>
+    </div>
   </div>
 
-  <div class="table-button-container">
-    <div class="table-container">
-      <table class="table-responsive-lg table-bordered">
-        <thead>
-          <tr>
-            <th scope="col" style="width: 150px; height: 50px;">Role</th>
-            <th scope="col" style="width: 150px;">School</th>
-            <th scope="col" style="width: 150px;">Salary</th>
-            <th scope="col" style="width: 300px;">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <% @vacancies.each do |vacancy|  %>
-              <td><%= link_to vacancy.title, vacancy_path(vacancy) %></td>
-              <td><%= vacancy.school %></td>
-              <td>£<%= vacancy.salary %></td>
-              <td><%= vacancy.description %></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="vacancy-position">
-      <p><%= link_to "Create new vacancy", new_vacancy_path, class: "btn btn-info create-vacancy-btn" %></p>
-    </div>
+  <div class="table-container">
+    <table class="table-responsive-lg table-bordered">
+      <thead>
+        <tr>
+          <th scope="col" style="width: 20%; height: 50px;">Role</th>
+          <th scope="col" style="width: 20%;">School</th>
+          <th scope="col" style="width: 20%;">Salary</th>
+          <th scope="col" style="width: 40%;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% @vacancies.each do |vacancy|  %>
+            <td><%= link_to vacancy.title, vacancy_path(vacancy) %></td>
+            <td><%= vacancy.school %></td>
+            <td>£<%= vacancy.salary %></td>
+            <td><%= vacancy.description %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
 
