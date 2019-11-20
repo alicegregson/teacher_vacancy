@@ -1,17 +1,20 @@
 <!-- Vacancy Detail Page -->
 
-<h1>Role Detail</h1>
+<h2>Further Details</h2>
 
-<h5>Role:</h5>
-<h7><%= @vacancy.title %></h7>
+<div class="role-detail offset-3">
+  <h5>Title:</h5>
+  <h7><%= @vacancy.title %></h7>
 
-<h5>School:</h5>
-<h7><%= @vacancy.school %></h7>
+  <h5>School:</h5>
+  <h7><%= @vacancy.school %></h7>
 
-<h5>Salary:</h5>
-<h7>£<%= @vacancy.salary %></h7>
+  <h5>Salary:</h5>
+  <h7>£<%= @vacancy.salary %></h7>
 
-<h5>Role Description:</h5>
-<h7><%= @vacancy.description %></h7>
+  <h5>Role Description:</h5>
+  <h7><%= @vacancy.description %></h7>
+</div>
 
-<%= link_to "Back to homepage", root_path %>
+<%= link_to "Back to homepage", root_path, class: "btn btn-info" %>
+

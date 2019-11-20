@@ -40,7 +40,7 @@
   private
 
   def vacancy_params
-    params.require(:vacancy).permit(:title, :school, :description)
+    params.require(:vacancy).permit(:title, :school, :description, :salary)
   end
 
 end

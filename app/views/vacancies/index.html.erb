@@ -1,30 +1,41 @@
-<h1>Job Vacancies</h1>
-<h4>Find your next role here:</h4>
+<!-- Index page / Full list of Vacancies -->
 
-<table class="table-responsive-lg table-bordered">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Role</th>
-      <th scope="col">School</th>
-      <th scope="col">Salary</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <% @vacancies.each do |vacancy|  %>
-      <th scope="row"></th>
-
-        <td><%= link_to vacancy.title, vacancy_path(vacancy) %></td>
-        <td><%= vacancy.school %></td>
-        <td><%= vacancy.salary %></td>
-        <td><%= vacancy.description %></td>
-
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="header-text">
+  <h1>Job Vacancies</h1>
+  <h4>Find your next role here:</h4>
+  <div class="vacancy-position">
+    <p><%= link_to "Create new vacancy", new_vacancy_path, class: "btn btn-info" %></p>
+  </div>
+</div>
 
 
- <p><%= link_to "Create new vacancy", new_vacancy_path %></p>
+
+<div class="table-container offset-3">
+  <table class="table-responsive-lg table-bordered">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col" style="width: 150px;">Role</th>
+        <th scope="col" style="width: 150px;">School</th>
+        <th scope="col" style="width: 150px;">Salary</th>
+        <th scope="col" style="width: 250px;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @vacancies.each do |vacancy|  %>
+        <th scope="row"></th>
+          <td><%= link_to vacancy.title, vacancy_path(vacancy) %></td>
+          <td><%= vacancy.school %></td>
+          <td><%= vacancy.salary %></td>
+          <td><%= vacancy.description %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
