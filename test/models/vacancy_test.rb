@@ -1,3 +1,5 @@
+# Model Tests
+
 require 'test_helper'
 
 class VacancyTest < ActiveSupport::TestCase
@@ -8,5 +10,13 @@ class VacancyTest < ActiveSupport::TestCase
   test "Title returns a string" do
     vacancy = Vacancy.new(title: "Biology Teacher")
     assert_equal "Biology Teacher", vacancy.title
+  end
+  test "School returns a string" do
+    vacancy = Vacancy.new(school: "Latymer")
+    assert_equal "Latymer", vacancy.school
+  end
+  test "Description returns a string" do
+    vacancy = Vacancy.new(description: "Looking for a Biology Teacher based in London")
+    assert_equal "Looking for a Biology Teacher based in London", vacancy.description
   end
 end
