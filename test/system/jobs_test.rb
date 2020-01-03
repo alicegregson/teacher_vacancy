@@ -7,9 +7,17 @@ class JobsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Job"
     assert_selector ".header-text", count: 1
   end
-  test "vacancy count" do
+
+  test "column count" do
     visit "/"
-    save_and_open_screenshot
+    # save_and_open_screenshot
     assert_selector "th", count: 4
   end
+
+  test "row count" do
+    visit "/"
+    # save_and_open_screenshot
+    assert_selector "tr", count: Vacancy.count + 1
+  end
+
 end

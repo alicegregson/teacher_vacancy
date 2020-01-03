@@ -22,7 +22,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="vacancy-rows">
+        <tr>
           <% @vacancies.each do |vacancy|  %>
             <td><%= link_to vacancy.title, vacancy_path(vacancy) %></td>
             <td><%= vacancy.school %></td>
