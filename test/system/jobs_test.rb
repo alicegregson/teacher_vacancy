@@ -19,5 +19,4 @@ class JobsTest < ApplicationSystemTestCase
     # save_and_open_screenshot
     assert_selector "tr", count: Vacancy.count + 1
   end
-
 end
