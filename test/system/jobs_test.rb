@@ -5,5 +5,6 @@ class JobsTest < ApplicationSystemTestCase
     visit "/"
     save_and_open_screenshot
     assert_selector "h1", text: "Job"
+    assert_selector ".header-text", count: 1
   end
 end
