@@ -7,7 +7,7 @@ one:
   description: MyText
 
 two:
-  title: MyString
-  school: MyString
-  salary: 1
-  description: MyText
+  title: MyString2
+  school: MyString2
+  salary: 2
+  description: MyText2
